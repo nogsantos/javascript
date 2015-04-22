@@ -5,11 +5,11 @@ function Animal(){
     /*
      */
     this.comer = function(){
-        alert("[Classe Animal]\nTodo animal come");
+        return "<div>» [Classe Animal]\nTodo animal come. &swarhk;</div>";
     };
     /*
      */
     this.respirar = function(){
-        alert("[Classe Animal]\nTodo animal de certa forma respira");
+        return "<div>» [Classe Animal]\nTodo animal, de certa forma, respira.</div>";
     };
 }

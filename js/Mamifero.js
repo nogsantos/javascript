@@ -5,6 +5,6 @@ function Mamifero(){
     /*
      */
     this.mamar = function(){
-        alert("[Classe Mamífero]\nMamíferos mamão! ;)");
+        return "<div>» [Classe Mamífero]\nMamíferos mamão! &swarhk;</div>";
     };
 }

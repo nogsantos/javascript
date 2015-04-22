@@ -83,20 +83,32 @@ $(function(){
     /*
      * Testando herança
      */
+    var $divHeranca = $("#resobjHeranca");
     $("#jsHerancaAnimal").on("click", function(){
-        var gato = new Animal();
-        gato.comer();
-        gato.respirar();
-        
+        $divHeranca.empty();
+        var $gato = new Animal();
+        setTimeout(function(){
+            $divHeranca.append($gato.comer()).show().fadeIn( "slow" );
+        },800);
+        setTimeout(function(){
+            $divHeranca.append($gato.respirar()).show().fadeIn( "slow" );
+        },2000);
     });
     /*
      * protótipos para herdar as características de outras classes
      */
     $("#jsHerancaMamifero").on("click", function(){
+        $divHeranca.empty();
         Mamifero.prototype = new Animal();
         $mamifero = new Mamifero();
-        $mamifero.mamar();
-        $mamifero.comer();
-        $mamifero.respirar();
+        setTimeout(function(){
+            $divHeranca.append($mamifero.mamar()).fadeIn( "slow" );
+        },800);
+        setTimeout(function(){
+            $divHeranca.append($mamifero.comer()).fadeIn( "slow" );
+        },2000);
+        setTimeout(function(){
+            $divHeranca.append($mamifero.respirar()).fadeIn( "slow" );
+        },3000);
     });
 });
